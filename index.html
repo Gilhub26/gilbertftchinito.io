@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Builder - Create Your Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>✨ Professional CV Builder</h1>
+        <p class="subtitle">Fill the form below to generate your beautiful CV</p>
+
+        <form action="generate_cv.php" method="POST" enctype="multipart/form-data" class="cv-form">
+            
+    
+            <div class="section">
+                <h2>Personal Information</h2>
+                <input type="text" name="full_name" placeholder="Full Name" required>
+                <input type="text" name="title" placeholder="Professional Title (e.g. Web Developer)" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="location" placeholder="City, Country" required>
+                <textarea name="summary" placeholder="Professional Summary (short bio)" rows="4" required></textarea>
+            </div>
+
+            
+            <div class="section">
+                <h2>Education</h2>
+                <input type="text" name="degree" placeholder="Degree (e.g. Bachelor of Science in Computer Science)" required>
+                <input type="text" name="university" placeholder="University Name" required>
+                <input type="text" name="edu_year" placeholder="Year (e.g. 2018 - 2022)" required>
+            </div>
+
+            
+            <div class="section">
+                <h2>Work Experience</h2>
+                <input type="text" name="job_title" placeholder="Job Title" required>
+                <input type="text" name="company" placeholder="Company Name" required>
+                <input type="text" name="exp_year" placeholder="Duration (e.g. 2022 - Present)" required>
+                <textarea name="job_desc" placeholder="Job Description / Achievements" rows="4" required></textarea>
+            </div>
+
+            
+            <div class="section">
+                <h2>Skills</h2>
+                <textarea name="skills" placeholder="List your skills separated by commas (e.g. PHP, HTML, CSS, MySQL, Laravel)" rows="3" required></textarea>
+            </div>
+
+            
+            <div class="section">
+                <h2>Profile Picture</h2>
+                <input type="file" name="profile_pic" accept="image/*" required>
+                <small>Upload a professional photo (JPG, PNG)</small>
+            </div>
+
+            <button type="submit" class="submit-btn">Generate My CV</button>
+        </form>
+    </div>
+</body>
+</html>
